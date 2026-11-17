@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -10,7 +10,7 @@
 
     <title>Crispy House</title>
 
-    <link rel="stylesheet" href="static/css/style.css" />
+    <link rel="stylesheet" href="../static/css/style.css" />
   </head>
 
   <body>
@@ -23,10 +23,10 @@
       <nav class="main-nav">
         <ul>
           <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="templates/menu.html">Menu</a></li>
-          <li><a href="templates/order.html">Order Now</a></li>
-          <li><a href="templates/login.html">Login</a></li>
-          <li><a href="templates/cart.html">Cart</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="order.html">Order Now</a></li>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="cart.html">Cart</a></li>
         </ul>
       </nav>
     </header>
@@ -44,12 +44,12 @@
             cravings.
           </p>
 
-          <a href="templates/menu.html" class="hero-button"> Explore Our Menu </a>
+          <a href="menu.html" class="hero-button"> Explore Our Menu </a>
         </div>
 
         <div class="hero-image">
           <img
-            src="static/images/branding/hero-chicken.jpg"
+            src="../static/images/branding/hero-chicken.jpg"
             alt="Crispy chicken sandwich with fresh ingredients"
           />
         </div>
@@ -88,7 +88,7 @@
           <div class="meal-card">
             <div class="meal-image">
               <img
-                src="static/images/products/crispy-burger.jpg"
+                src="../static/images/products/crispy-burger.jpg"
                 alt="Crispy Chicken Burger"
               />
 
@@ -111,7 +111,7 @@
           <div class="meal-card">
             <div class="meal-image">
               <img
-                src="static/images/products/chicken-meal.jpg"
+                src="../static/images/products/chicken-meal.jpg"
                 alt="Classic Crispy Chicken Meal with Fries"
               />
             </div>
@@ -129,7 +129,7 @@
           <div class="meal-card">
             <div class="meal-image">
               <img
-                src="static/images/products/chicken-strips.jpg"
+                src="../static/images/products/chicken-strips.jpg"
                 alt="Crispy Golden Chicken Strips"
               />
             </div>
@@ -145,30 +145,57 @@
         </div>
 
         <div class="menu-link">
-          <a href="templates/menu.html">View Full Menu</a>
+          <a href="menu.html">View Full Menu</a>
         </div>
       </section>
     </main>
 
     <!-- Footer -->
+    <!-- Footer -->
     <footer class="main-footer">
       <div class="footer-content">
-        <h2>Crispy House</h2>
+        <div class="footer-grid">
+          <!-- Brand -->
+          <div class="footer-column footer-brand">
+            <h2>Crispy House</h2>
+            <p>Taste the Crunch!</p>
+          </div>
 
-        <p>Taste the Crunch!</p>
+          <!-- Quick Links -->
+          <div class="footer-column">
+            <h3>Quick Links</h3>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="menu.html">Menu</a></li>
+              <li><a href="order.html">Order Now</a></li>
+            </ul>
+          </div>
 
-        <nav class="footer-nav">
-          <a href="index.html">Home</a>
-          <a href="templates/menu.html">Menu</a>
-          <a href="templates/order.html">Order Now</a>
-        </nav>
+          <!-- Account -->
+          <div class="footer-column">
+            <h3>Account</h3>
+            <ul class="footer-links">
+              <li><a href="login.html">Login</a></li>
+              <li><a href="signup.html">Sign Up</a></li>
+              <li><a href="cart.html">Cart</a></li>
+            </ul>
+          </div>
+
+          <!-- Contact -->
+          <div class="footer-column">
+            <h3>Contact Us</h3>
+            <!-- PLACEHOLDER DATA: replace with the real restaurant info -->
+            <ul class="footer-contact">
+              <li>Cairo, Egypt</li>
+              <li>+20 100 000 0000</li>
+              <li>info@crispyhouse.example</li>
+              <li>Daily: 10 AM – 12 AM</li>
+            </ul>
+          </div>
+        </div>
 
         <p class="copyright">&copy; 2026 Crispy House. All Rights Reserved.</p>
       </div>
     </footer>
   </body>
 </html>
-
-
-
-

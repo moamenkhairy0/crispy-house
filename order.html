@@ -2,42 +2,66 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Place your order at Crispy House." />
+    <meta
+      name="description"
+      content="Choose your favorite Crispy House meals and place your order."
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Place Your Order | Crispy House</title>
 
-    <link rel="stylesheet" href="static/css/style.css" />
+    <link rel="stylesheet" href="../static/css/style.css" />
   </head>
 
   <body>
-    <!-- Header -->
+    <!-- =========================
+         Header & Navigation
+    ========================== -->
+
     <header class="main-header">
       <div class="logo">
         <a href="index.html">Crispy House</a>
       </div>
 
-      <nav class="main-nav">
+      <nav class="main-nav" aria-label="Main Navigation">
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="menu.html">Menu</a></li>
-          <li><a href="order.html" class="active">Order Now</a></li>
+          <li>
+            <a href="order.html" class="active" aria-current="page">
+              Order Now
+            </a>
+          </li>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="cart.html">Cart</a></li>
         </ul>
       </nav>
     </header>
 
     <main>
-      <!-- Order Hero -->
+      <!-- =========================
+           Order Hero
+      ========================== -->
+
       <section class="order-hero">
         <p class="section-subtitle">TASTE THE CRUNCH</p>
+
         <h1>Place Your Order</h1>
-        <p>Choose your favorite meals and let us deliver them to you.</p>
+
+        <p>
+          Choose your favorite meals, select the quantities, and enter your
+          delivery details.
+        </p>
       </section>
 
-      <!-- Order Section -->
+      <!-- =========================
+           Order Form
+      ========================== -->
+
       <section class="order-section">
-        <form class="order-form" method="POST">
+        <form class="order-form" action="cart.html" method="GET">
           <!-- Step 1: Choose Products -->
+
           <div class="order-step">
             <div class="order-step-heading">
               <span class="step-number">1</span>
@@ -49,160 +73,231 @@
             </div>
 
             <div class="order-products">
-              <!-- Crispy Burger -->
-              <div class="order-product-card">
+              <!-- Crispy Chicken Burger -->
+
+              <article class="order-product-card">
                 <div class="order-product-image">
                   <img
-                    src="static/images/products/crispy-burger.jpg"
+                    src="../static/images/products/crispy-burger.jpg"
                     alt="Crispy Chicken Burger"
+                    loading="lazy"
                   />
                 </div>
 
                 <div class="order-product-info">
                   <h3>Crispy Chicken Burger</h3>
+
                   <p>EGP 120</p>
 
-                  <label for="burger-quantity">Quantity</label>
+                  <label for="burger-quantity"> Quantity </label>
+
                   <input
                     type="number"
                     id="burger-quantity"
                     name="burger_quantity"
                     min="0"
+                    step="1"
                     value="0"
+                    inputmode="numeric"
                   />
                 </div>
-              </div>
+              </article>
 
-              <!-- Chicken Meal -->
-              <div class="order-product-card">
+              <!-- Classic Chicken Meal -->
+
+              <article class="order-product-card">
                 <div class="order-product-image">
                   <img
-                    src="static/images/products/chicken-meal.jpg"
+                    src="../static/images/products/chicken-meal.jpg"
                     alt="Classic Chicken Meal"
+                    loading="lazy"
                   />
                 </div>
 
                 <div class="order-product-info">
                   <h3>Classic Chicken Meal</h3>
+
                   <p>EGP 180</p>
 
-                  <label for="meal-quantity">Quantity</label>
+                  <label for="meal-quantity"> Quantity </label>
+
                   <input
                     type="number"
                     id="meal-quantity"
                     name="meal_quantity"
                     min="0"
+                    step="1"
                     value="0"
+                    inputmode="numeric"
                   />
                 </div>
-              </div>
+              </article>
 
-              <!-- Chicken Strips -->
-              <div class="order-product-card">
+              <!-- Crispy Chicken Strips -->
+
+              <article class="order-product-card">
                 <div class="order-product-image">
                   <img
-                    src="static/images/products/chicken-strips.jpg"
+                    src="../static/images/products/chicken-strips.jpg"
                     alt="Crispy Chicken Strips"
+                    loading="lazy"
                   />
                 </div>
 
                 <div class="order-product-info">
                   <h3>Crispy Chicken Strips</h3>
+
                   <p>EGP 150</p>
 
-                  <label for="strips-quantity">Quantity</label>
+                  <label for="strips-quantity"> Quantity </label>
+
                   <input
                     type="number"
                     id="strips-quantity"
                     name="strips_quantity"
                     min="0"
+                    step="1"
                     value="0"
+                    inputmode="numeric"
                   />
                 </div>
-              </div>
+              </article>
             </div>
           </div>
 
           <!-- Step 2: Customer Details -->
+
           <div class="order-step">
             <div class="order-step-heading">
               <span class="step-number">2</span>
 
               <div>
                 <h2>Delivery Details</h2>
-                <p>Enter your information to complete your order.</p>
+                <p>Enter your information for delivery.</p>
               </div>
             </div>
 
             <div class="customer-details">
+              <!-- Full Name -->
+
               <div class="form-group">
-                <label for="customer-name">Full Name</label>
+                <label for="customer-name"> Full Name </label>
+
                 <input
                   type="text"
                   id="customer-name"
                   name="customer_name"
                   placeholder="Enter your full name"
+                  autocomplete="name"
                   required
                 />
               </div>
 
+              <!-- Phone Number -->
+
               <div class="form-group">
-                <label for="customer-phone">Phone Number</label>
+                <label for="customer-phone"> Phone Number </label>
+
                 <input
                   type="tel"
                   id="customer-phone"
                   name="customer_phone"
                   placeholder="Enter your phone number"
+                  autocomplete="tel"
+                  inputmode="tel"
                   required
                 />
               </div>
 
+              <!-- Delivery Address -->
+
               <div class="form-group">
-                <label for="customer-address">Delivery Address</label>
+                <label for="customer-address"> Delivery Address </label>
+
                 <textarea
                   id="customer-address"
                   name="customer_address"
                   rows="4"
-                  placeholder="Enter your full address"
+                  placeholder="Enter your full delivery address"
+                  autocomplete="street-address"
                   required
                 ></textarea>
               </div>
             </div>
           </div>
 
-          <!-- Order Summary -->
+          <!-- =========================
+               Order Summary
+          ========================== -->
+
           <div class="order-summary">
             <h2>Order Summary</h2>
 
             <p>
-              Your order total will be calculated based on the selected products
-              and quantities.
+              Your selected products and delivery information will be used for
+              the next step.
             </p>
 
             <div class="summary-total">
-              <span>Total Price</span>
+              <span>Order Total</span>
+
               <strong>Calculated at checkout</strong>
             </div>
 
             <button type="submit" class="confirm-order-button">
-              Confirm Order
+              Continue to Cart
             </button>
           </div>
         </form>
       </section>
     </main>
 
-    <!-- Footer -->
+    <!-- =========================
+         Footer
+    ========================== -->
+
+        <!-- Footer -->
     <footer class="main-footer">
       <div class="footer-content">
-        <h2>Crispy House</h2>
-        <p>Taste the Crunch!</p>
+        <div class="footer-grid">
+          <!-- Brand -->
+          <div class="footer-column footer-brand">
+            <h2>Crispy House</h2>
+            <p>Taste the Crunch!</p>
+          </div>
 
-        <nav class="footer-nav">
-          <a href="index.html">Home</a>
-          <a href="menu.html">Menu</a>
-          <a href="order.html">Order Now</a>
-        </nav>
+          <!-- Quick Links -->
+          <div class="footer-column">
+            <h3>Quick Links</h3>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="menu.html">Menu</a></li>
+              <li><a href="order.html">Order Now</a></li>
+            </ul>
+          </div>
+
+          <!-- Account -->
+          <div class="footer-column">
+            <h3>Account</h3>
+            <ul class="footer-links">
+              <li><a href="login.html">Login</a></li>
+              <li><a href="signup.html">Sign Up</a></li>
+              <li><a href="cart.html">Cart</a></li>
+            </ul>
+          </div>
+
+          <!-- Contact -->
+          <div class="footer-column">
+            <h3>Contact Us</h3>
+            <!-- PLACEHOLDER DATA: replace with the real restaurant info -->
+            <ul class="footer-contact">
+              <li>Cairo, Egypt</li>
+              <li>+20 100 000 0000</li>
+              <li>info@crispyhouse.example</li>
+              <li>Daily: 10 AM – 12 AM</li>
+            </ul>
+          </div>
+        </div>
 
         <p class="copyright">&copy; 2026 Crispy House. All Rights Reserved.</p>
       </div>
