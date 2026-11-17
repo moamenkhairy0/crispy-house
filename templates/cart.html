@@ -1,0 +1,302 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Review your selected products and order summary at Crispy House."
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Shopping Cart | Crispy House</title>
+
+    <link rel="stylesheet" href="../static/css/style.css" />
+  </head>
+
+  <body>
+    <!-- =========================
+         Header & Navigation
+    ========================== -->
+
+    <header class="main-header">
+      <div class="logo">
+        <a href="index.html">Crispy House</a>
+      </div>
+
+      <nav class="main-nav" aria-label="Main Navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="order.html">Order Now</a></li>
+          <li><a href="login.html">Login</a></li>
+          <li>
+            <a href="cart.html" class="active" aria-current="page">
+              Cart
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- =========================
+           Cart Hero
+      ========================== -->
+
+      <section class="menu-hero">
+        <p class="section-subtitle">TASTE THE CRUNCH</p>
+
+        <h1>Shopping Cart</h1>
+
+        <p>
+          Review your selected meals and check your order details
+          before proceeding.
+        </p>
+      </section>
+
+      <!-- =========================
+           Cart Section
+      ========================== -->
+
+      <section class="menu-section">
+
+        <!--
+          BACK-END INTEGRATION NOTE:
+
+          The products below are sample data for front-end display.
+
+          The Back-End should:
+          1. Retrieve the selected products from the user's order.
+          2. Display only the products selected by the customer.
+          3. Retrieve the correct product images and prices.
+          4. Display the selected quantity for each product.
+          5. Calculate each item's subtotal.
+          6. Calculate the final order total.
+
+          Repeat the cart-item block for each selected product.
+          Do not use these sample quantities as actual order data.
+        -->
+
+        <div class="cart-layout">
+
+          <!-- =========================
+               Cart Items
+          ========================== -->
+
+          <div class="order-step">
+
+            <div class="order-step-heading">
+              <span class="step-number">1</span>
+
+              <div>
+                <h2>Your Selected Items</h2>
+                <p>Review your products and quantities.</p>
+              </div>
+            </div>
+
+            <div class="cart-items">
+
+              <!-- Product 1: Crispy Chicken Burger -->
+
+              <article class="cart-item">
+                <div class="cart-item-image">
+                  <img
+                    src="../static/images/products/crispy-burger.jpg"
+                    alt="Crispy Chicken Burger"
+                  />
+                </div>
+
+                <div class="cart-item-info">
+                  <h3>Crispy Chicken Burger</h3>
+
+                  <p class="cart-item-price">
+                    EGP 120
+                  </p>
+
+                  <p class="cart-item-quantity">
+                    Quantity: 2
+                  </p>
+                </div>
+
+                <div class="cart-item-total">
+                  <strong>EGP 240</strong>
+                </div>
+              </article>
+
+              <!-- Product 2: Classic Chicken Meal -->
+
+              <article class="cart-item">
+                <div class="cart-item-image">
+                  <img
+                    src="../static/images/products/chicken-meal.jpg"
+                    alt="Classic Chicken Meal"
+                  />
+                </div>
+
+                <div class="cart-item-info">
+                  <h3>Classic Chicken Meal</h3>
+
+                  <p class="cart-item-price">
+                    EGP 180
+                  </p>
+
+                  <p class="cart-item-quantity">
+                    Quantity: 1
+                  </p>
+                </div>
+
+                <div class="cart-item-total">
+                  <strong>EGP 180</strong>
+                </div>
+              </article>
+
+              <!-- Product 3: Crispy Chicken Strips -->
+
+              <article class="cart-item">
+                <div class="cart-item-image">
+                  <img
+                    src="../static/images/products/chicken-strips.jpg"
+                    alt="Crispy Chicken Strips"
+                  />
+                </div>
+
+                <div class="cart-item-info">
+                  <h3>Crispy Chicken Strips</h3>
+
+                  <p class="cart-item-price">
+                    EGP 150
+                  </p>
+
+                  <p class="cart-item-quantity">
+                    Quantity: 1
+                  </p>
+                </div>
+
+                <div class="cart-item-total">
+                  <strong>EGP 150</strong>
+                </div>
+              </article>
+
+            </div>
+          </div>
+
+          <!-- =========================
+               Order Summary
+          ========================== -->
+
+          <aside class="order-summary">
+
+            <h2>Order Summary</h2>
+
+            <p>
+              Review the price details of your order.
+            </p>
+
+            <div class="summary-row">
+              <span>Items Subtotal</span>
+              <strong>EGP 570</strong>
+            </div>
+
+            <div class="summary-row">
+              <span>Delivery Fee</span>
+              <strong>Not calculated</strong>
+            </div>
+
+            <div class="summary-total">
+              <span>Total Price</span>
+              <strong>EGP 570</strong>
+            </div>
+
+            <a
+              href="confirmation.html"
+              class="confirm-order-button summary-button cart-checkout"
+            >
+              Proceed to Checkout
+            </a>
+
+            <div class="menu-link">
+              <a href="menu.html">Continue Shopping</a>
+            </div>
+
+          </aside>
+
+        </div>
+
+        <!-- =========================
+             Empty Cart State
+        ========================== -->
+
+        <!--
+          BACK-END NOTE:
+          Display this section when the customer has no selected products.
+          Hide the cart-layout section in that case.
+        -->
+
+        <section class="cart-empty" hidden>
+          <h2>Your Cart Is Empty</h2>
+
+          <p>
+            You haven't added any products to your cart yet.
+          </p>
+
+          <div class="menu-link">
+            <a href="menu.html">Explore Our Menu</a>
+          </div>
+        </section>
+
+      </section>
+    </main>
+
+    <!-- =========================
+         Footer
+    ========================== -->
+
+       <!-- Footer -->
+    <footer class="main-footer">
+      <div class="footer-content">
+        <div class="footer-grid">
+          <!-- Brand -->
+          <div class="footer-column footer-brand">
+            <h2>Crispy House</h2>
+            <p>Taste the Crunch!</p>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="footer-column">
+            <h3>Quick Links</h3>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="menu.html">Menu</a></li>
+              <li><a href="order.html">Order Now</a></li>
+            </ul>
+          </div>
+
+          <!-- Account -->
+          <div class="footer-column">
+            <h3>Account</h3>
+            <ul class="footer-links">
+              <li><a href="login.html">Login</a></li>
+              <li><a href="signup.html">Sign Up</a></li>
+              <li><a href="cart.html">Cart</a></li>
+            </ul>
+          </div>
+
+          <!-- Contact -->
+          <div class="footer-column">
+            <h3>Contact Us</h3>
+            <!-- PLACEHOLDER DATA: replace with the real restaurant info -->
+            <ul class="footer-contact">
+              <li>Cairo, Egypt</li>
+              <li>+20 100 000 0000</li>
+              <li>info@crispyhouse.example</li>
+              <li>Daily: 10 AM – 12 AM</li>
+            </ul>
+          </div>
+        </div>
+
+        <p class="copyright">&copy; 2026 Crispy House. All Rights Reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
