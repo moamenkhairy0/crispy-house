@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Choose your favorite Crispy House meals and place your order."
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Place Your Order | Crispy House</title>
+
+    <link rel="stylesheet" href="../static/css/style.css" />
+  </head>
+
+  <body>
+    <!-- =========================
+         Header & Navigation
+    ========================== -->
+
+    <header class="main-header">
+      <div class="logo">
+        <a href="index.html">Crispy House</a>
+      </div>
+
+      <nav class="main-nav" aria-label="Main Navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li>
+            <a href="order.html" class="active" aria-current="page">
+              Order Now
+            </a>
+          </li>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="cart.html">Cart</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- =========================
+           Order Hero
+      ========================== -->
+
+      <section class="order-hero">
+        <p class="section-subtitle">TASTE THE CRUNCH</p>
+
+        <h1>Place Your Order</h1>
+
+        <p>
+          Choose your favorite meals, select the quantities, and enter your
+          delivery details.
+        </p>
+      </section>
+
+      <!-- =========================
+           Order Form
+      ========================== -->
+
+      <section class="order-section">
+        <form class="order-form" action="cart.html" method="GET">
+          <!-- Step 1: Choose Products -->
+
+          <div class="order-step">
+            <div class="order-step-heading">
+              <span class="step-number">1</span>
+
+              <div>
+                <h2>Choose Your Order</h2>
+                <p>Select your favorite products and quantities.</p>
+              </div>
+            </div>
+
+            <div class="order-products">
+              <!-- Crispy Chicken Burger -->
+
+              <article class="order-product-card">
+                <div class="order-product-image">
+                  <img
+                    src="../static/images/products/crispy-burger.jpg"
+                    alt="Crispy Chicken Burger"
+                    loading="lazy"
+                  />
+                </div>
+
+                <div class="order-product-info">
+                  <h3>Crispy Chicken Burger</h3>
+
+                  <p>EGP 120</p>
+
+                  <label for="burger-quantity"> Quantity </label>
+
+                  <input
+                    type="number"
+                    id="burger-quantity"
+                    name="burger_quantity"
+                    min="0"
+                    step="1"
+                    value="0"
+                    inputmode="numeric"
+                  />
+                </div>
+              </article>
+
+              <!-- Classic Chicken Meal -->
+
+              <article class="order-product-card">
+                <div class="order-product-image">
+                  <img
+                    src="../static/images/products/chicken-meal.jpg"
+                    alt="Classic Chicken Meal"
+                    loading="lazy"
+                  />
+                </div>
+
+                <div class="order-product-info">
+                  <h3>Classic Chicken Meal</h3>
+
+                  <p>EGP 180</p>
+
+                  <label for="meal-quantity"> Quantity </label>
+
+                  <input
+                    type="number"
+                    id="meal-quantity"
+                    name="meal_quantity"
+                    min="0"
+                    step="1"
+                    value="0"
+                    inputmode="numeric"
+                  />
+                </div>
+              </article>
+
+              <!-- Crispy Chicken Strips -->
+
+              <article class="order-product-card">
+                <div class="order-product-image">
+                  <img
+                    src="../static/images/products/chicken-strips.jpg"
+                    alt="Crispy Chicken Strips"
+                    loading="lazy"
+                  />
+                </div>
+
+                <div class="order-product-info">
+                  <h3>Crispy Chicken Strips</h3>
+
+                  <p>EGP 150</p>
+
+                  <label for="strips-quantity"> Quantity </label>
+
+                  <input
+                    type="number"
+                    id="strips-quantity"
+                    name="strips_quantity"
+                    min="0"
+                    step="1"
+                    value="0"
+                    inputmode="numeric"
+                  />
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <!-- Step 2: Customer Details -->
+
+          <div class="order-step">
+            <div class="order-step-heading">
+              <span class="step-number">2</span>
+
+              <div>
+                <h2>Delivery Details</h2>
+                <p>Enter your information for delivery.</p>
+              </div>
+            </div>
+
+            <div class="customer-details">
+              <!-- Full Name -->
+
+              <div class="form-group">
+                <label for="customer-name"> Full Name </label>
+
+                <input
+                  type="text"
+                  id="customer-name"
+                  name="customer_name"
+                  placeholder="Enter your full name"
+                  autocomplete="name"
+                  required
+                />
+              </div>
+
+              <!-- Phone Number -->
+
+              <div class="form-group">
+                <label for="customer-phone"> Phone Number </label>
+
+                <input
+                  type="tel"
+                  id="customer-phone"
+                  name="customer_phone"
+                  placeholder="Enter your phone number"
+                  autocomplete="tel"
+                  inputmode="tel"
+                  required
+                />
+              </div>
+
+              <!-- Delivery Address -->
+
+              <div class="form-group">
+                <label for="customer-address"> Delivery Address </label>
+
+                <textarea
+                  id="customer-address"
+                  name="customer_address"
+                  rows="4"
+                  placeholder="Enter your full delivery address"
+                  autocomplete="street-address"
+                  required
+                ></textarea>
+              </div>
+            </div>
+          </div>
+
+          <!-- =========================
+               Order Summary
+          ========================== -->
+
+          <div class="order-summary">
+            <h2>Order Summary</h2>
+
+            <p>
+              Your selected products and delivery information will be used for
+              the next step.
+            </p>
+
+            <div class="summary-total">
+              <span>Order Total</span>
+
+              <strong>Calculated at checkout</strong>
+            </div>
+
+            <button type="submit" class="confirm-order-button">
+              Continue to Cart
+            </button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <!-- =========================
+         Footer
+    ========================== -->
+
+    <footer class="main-footer">
+      <div class="footer-content">
+        <h2>Crispy House</h2>
+
+        <p>Taste the Crunch!</p>
+
+        <nav class="footer-nav" aria-label="Footer Navigation">
+          <a href="index.html">Home</a>
+          <a href="menu.html">Menu</a>
+          <a href="order.html">Order Now</a>
+        </nav>
+
+        <p class="copyright">&copy; 2026 Crispy House. All Rights Reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
